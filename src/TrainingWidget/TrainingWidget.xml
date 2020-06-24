@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<widget id="TrainingWidget.widget.TrainingWidget" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+<widget id="TrainingWidget.widget.TrainingWidget" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>TrainingWidget</name>
     <description>The description of this widget.</description>
 
     <icon />
 
     <properties>
-        <property key="radius" type="integer" required="true" defaultValue="10">
+        <property key="radius" type="attribute" required="true">
             <caption>Radius</caption>
-            <category>Appearance</category>
-            <description>Radius of the circle.</description>
+            <category>Data Source</category>
+            <description>Radius.</description>
+            <attributeTypes>
+               <attributeType name="Integer"/>
+            </attributeTypes>
         </property>
-        <property key="xcoord" type="integer" required="true" defaultValue="100">
-            <caption>Left</caption>
-            <category>Appearance</category>
-            <description>Left.</description>
+        <property key="xCoord" type="attribute" required="true">
+            <caption>XCoord</caption>
+            <category>Data Source</category>
+            <description>XCoord.</description>
+            <attributeTypes>
+                <attributeType name="Integer"/>
+            </attributeTypes>
         </property>
-        <property key="ycoord" type="integer" required="true" defaultValue="100">
-            <caption>Top</caption>
-            <category>Appearance</category>
-            <description>Top.</description>
+        <property key="yCoord" type="attribute" required="true">
+            <caption>YCoord</caption>
+            <category>Data Source</category>
+            <description>YCoord.</description>
+            <attributeTypes>
+                <attributeType name="Integer"/>
+            </attributeTypes>
         </property>
+        <property key="color" type="attribute" required="true">
+            <caption>Color</caption>
+            <category>Data Source</category>
+            <description>Color.</description>
+            <attributeTypes>
+                <attributeType name="String"/>
+            </attributeTypes>
+         </property>
     </properties>
 </widget>
