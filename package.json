@@ -26,7 +26,7 @@
   },
   "generatorVersion": "2.2.5",
   "paths": {
-    "testProjectFolder": "./test/",
+    "testProjectFolder": "C:\\Users\\Optimus\\Documents\\Mendix\\MendixApp-main",
     "testProjectFileName": "Test.mpr"
   },
   "scripts": {
