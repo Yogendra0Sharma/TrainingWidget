@@ -6,15 +6,17 @@
     <icon />
 
     <properties>
-        <property key="radius" type="attribute" required="true">
-            <caption>Radius</caption>
-            <category>Data Source</category>
-            <description>Radius.</description>
-            <attributeTypes>
-               <attributeType name="Integer"/>
-            </attributeTypes>
+        <property key="shapeEntity" type="entity" required="true">
+            <caption>Shape</caption>
+            <category>Shape</category>
+            <description>Shape.</description>
         </property>
-        <property key="xCoord" type="attribute" required="true">
+        <property key="shapeToFlow" type="entity" required="true" isPath="yes" pathType="reference" entityProperty="shapeEntity">
+            <caption>Reference to flow</caption>
+            <category>Shape</category>
+            <description>Shape.</description>
+        </property>
+        <property key="xCoord" type="attribute" required="true" entityProperty="shapeEntity">
             <caption>XCoord</caption>
             <category>Data Source</category>
             <description>XCoord.</description>
@@ -22,7 +24,7 @@
                 <attributeType name="Integer"/>
             </attributeTypes>
         </property>
-        <property key="yCoord" type="attribute" required="true">
+        <property key="yCoord" type="attribute" required="true" entityProperty="shapeEntity">
             <caption>YCoord</caption>
             <category>Data Source</category>
             <description>YCoord.</description>
@@ -30,7 +32,7 @@
                 <attributeType name="Integer"/>
             </attributeTypes>
         </property>
-        <property key="color" type="attribute" required="true">
+        <property key="color" type="attribute" required="true" entityProperty="shapeEntity">
             <caption>Color</caption>
             <category>Data Source</category>
             <description>Color.</description>
