@@ -11,5 +11,15 @@
             <category>Appearance</category>
             <description>Radius of the circle.</description>
         </property>
+        <property key="xcoord" type="integer" required="true" defaultValue="100">
+            <caption>Left</caption>
+            <category>Appearance</category>
+            <description>Left.</description>
+        </property>
+        <property key="ycoord" type="integer" required="true" defaultValue="100">
+            <caption>Top</caption>
+            <category>Appearance</category>
+            <description>Top.</description>
+        </property>
     </properties>
 </widget>
