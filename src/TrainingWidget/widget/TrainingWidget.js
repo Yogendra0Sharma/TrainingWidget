@@ -28,9 +28,9 @@ define([
         // DOM elements
         canvas: null,
         // Parameters configured in the Modeler.
-        radius: null,
-        xcoord: null,
-        ycoord: null,
+        // radius: null,
+        // xcoord: null,
+        // ycoord: null,
 
         // Internal variables. Non-primitives created in the prototype are shared between all widget instances.
         _handles: null,
@@ -65,19 +65,26 @@ define([
 
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
-            } else {
-                dojoStyle.set(this.domNode, "display", "block");
+
+                var radius = this._contextObj.get(this.radius);
+                var xcoord = this._contextObj.get(this.xCoord);
+                var ycoord = this._contextObj.get(this.yCoord);
+                var color = this._contextObj.get(this.color);
+
 
                 var circleDom = dojoConstruct.toDom("<div></div>");
-                dojoStyle.set(circleDom,"width","100px");
-                dojoStyle.set(circleDom,"height","100px");
+                dojoStyle.set(circleDom,"width",radius * 2 + "px");
+                dojoStyle.set(circleDom,"height",radius * 2 + "px");
                 dojoStyle.set(circleDom,"position","absolute");
                 dojoStyle.set(circleDom,"border-radius","50%");
-                dojoStyle.set(circleDom,"background-color","blue");
-                dojoStyle.set(circleDom,"top",this.ycoord + "px");
-                dojoStyle.set(circleDom,"left",this.xcoord + "px");
+                dojoStyle.set(circleDom,"background-color",color);
+                dojoStyle.set(circleDom,"top",ycoord + "px");
+                dojoStyle.set(circleDom,"left",xcoord + "px");
                 dojoConstruct.place(circleDom,this.canvas);
 
+
+            } else {
+                dojoStyle.set(this.domNode, "display", "none");
             }
             // The callback, coming from update, needs to be executed, to let the page know it finished rendering
             this._executeCallback(callback, "_updateRendering");
